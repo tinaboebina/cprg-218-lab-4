@@ -1,23 +1,8 @@
 /*----- HERO IMAGE -----*/
-.hero-text {
-  font-family: "Rampart One", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.hero-text h2 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #000000;
-}
-
 .hero-container {
-  color: #000000;
   height: 100vh;
 }
+
 .hero-container img {
   width: 100%;
   height: 100%;
@@ -31,10 +16,27 @@
   justify-content: center;
 }
 
+.hero-text {
+  font-family: "Rampart One", sans-serif; /* GOOGLE FONT */
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*----- SUB HEADER -----*/
+.hero-text h2 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #000000;
+}
+
 /*----- CONTENT -----*/
 .content-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* changed to 1fr for equal width columns */
+  grid-template-columns: 1fr 1fr; /* CREATING TWO COLUMNS */
   text-align: center;
   background-color: #8c7f69;
   color: #fff;
@@ -44,26 +46,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* center horizontally */
-  padding: 0 7vw; /* adjusted padding */
-  text-align: center; /* center text inside */
+  align-items: center; /* CENTER HORIZONTALLY */
+  text-align: center;
+  padding: 0 7vw;
 }
 
 .content-img {
-  max-width: 100%; /* ensure the image takes up full width */
-  max-height: 100%;
+  max-width: 100%; /* IMAGE FILLS WIDTH OF COLUMN */
+  max-height: 100%; /* IMAGE FILLS HEIGHT OF COLUMN */
 }
 
-/* Mobile */
+/*----- MOBILE -----*/
 @media screen and (max-width: 768px) {
   .content-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* CHANGE TO ONE COLUMN */
   }
 
   .content-img {
     padding-top: 5vh;
-    max-width: 100%; /* ensure the image takes up full width */
-    max-height: 100%;
+    max-width: 100%; /* IMAGE FILLS WIDTH OF COLUMN */
+    max-height: 100%; /* IMAGE FILLS HEIGHT OF COLUMN */
   }
 }
 
@@ -88,15 +90,16 @@
   padding-right: 24px;
 }
 
-.active, .accordion:hover {
-  background-color: #9ba666;
+.active, .accordion:hover { 
+  background-color: #9ba666; /* CHANGE HOVER COLOUR */
 }
 
 .accordion svg {
   position: absolute;
   padding-right: 3vh;
-  right: 0;
+  right: 0; /* MOVE ICON TO RIGHT OF BUTTON */
 }
+
 .panel {
   padding: 0 18px;
   background-color: #485930;
@@ -107,7 +110,7 @@
 /*----- FOOTER -----*/
 footer {
   display: grid;
-  grid-template-columns: 5;
+  grid-template-columns: 5; /* FIVE COLUMNS */
   text-align: left;
   padding: 1vh;
   background-color: #c1b5a7;
@@ -142,7 +145,7 @@ footer {
 
 #footer {
   text-align: center;
-  grid-column: span 5;
+  grid-column: span 5; /* EXTEND COOPYRIGHT TO SPAN THE WHOLE PAGE */
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
