@@ -1,5 +1,5 @@
-//----- TOGGLE ACCORDIAN -----//
-var acc = document.getElementsByClassName("accordion"); // SELECT ACCORDIAN
+//----- TOGGLE ACCORDION -----//
+var acc = document.getElementsByClassName("accordion"); // SELECT ACCORDION
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -7,7 +7,8 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
+    var panelStyle = window.getComputedStyle(panel);
+    if (panelStyle.display === "block") {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
@@ -19,8 +20,8 @@ for (i = 0; i < acc.length; i++) {
 function updateFooterDate() {
     var currentYear = new Date().getFullYear();
     document.getElementById("currentYear").textContent = currentYear;
-  }
+}
 
-  updateFooterDate();
+updateFooterDate();
 
-  setInterval(updateFooterDate, 1000 * 60 * 60 * 24 * 365);
+setInterval(updateFooterDate, 1000 * 60 * 60 * 24 * 365);

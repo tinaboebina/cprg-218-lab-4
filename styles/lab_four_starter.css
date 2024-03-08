@@ -5,12 +5,10 @@
 
 .hero-container img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
 #hero {
-  background: center no-repeat/cover;
   position: relative;
   display: flex;
   justify-content: center;
@@ -110,7 +108,7 @@
 /*----- FOOTER -----*/
 footer {
   display: grid;
-  grid-template-columns: 5; /* FIVE COLUMNS */
+  grid-template-columns: repeat(5, 1fr); /* FIVE COLUMNS */
   text-align: left;
   padding: 1vh;
   background-color: #c1b5a7;
@@ -145,7 +143,7 @@ footer {
 
 #footer {
   text-align: center;
-  grid-column: span 5; /* EXTEND COOPYRIGHT TO SPAN THE WHOLE PAGE */
+  grid-column: span 5; /* EXTEND COPYRIGHT TO SPAN THE WHOLE PAGE */
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
